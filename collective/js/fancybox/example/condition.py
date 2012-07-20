@@ -15,7 +15,7 @@ class IncludeFancybox(BrowserView):
             if not self.context.portal_type == 'News Item':
                 return False
         elif use_on =='use_on_text':
-            if not hasattr(aq_base(self.context), 'text'):
+            if not hasattr(aq_base(self.context), 'CookedBody'):
                 return False
         
         registry = getToolByName(self.context, 'portal_registry')
