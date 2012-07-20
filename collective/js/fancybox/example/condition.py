@@ -11,13 +11,6 @@ class IncludeFancybox(BrowserView):
         """
           Return True if the fancybox behaviour is activated in portal_registry for given 'use_on'
         """
-        if use_on == 'use_on_newsitem':
-            if not self.context.portal_type == 'News Item':
-                return False
-        elif use_on =='use_on_text':
-            if not hasattr(aq_base(self.context), 'CookedBody'):
-                return False
-        
         registry = getToolByName(self.context, 'portal_registry')
         if registry.get('collective.js.fancybox.example.controlpanel.IFancyboxSettings.%s' % use_on):
             return True

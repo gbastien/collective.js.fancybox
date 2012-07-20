@@ -2,17 +2,17 @@
 <object name="portal_javascripts">
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True"
-    expression="python: here.restrictedTraverse('@@fancybox-include-condition').isOnFor('use_on_newsitem')"
+    expression="python: here.restrictedTraverse('@@fancybox-include-condition').isOnFor('use_on_newsitem') and here.portal_type == 'News Item'"
     id="++resource++collective.js.fancybox/example/collective.js.fancybox_newsitem.js" inline="False"
     insert-after="++resource++collective.js.fancybox/jquery.fancybox.js" />
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True"
-    expression="python: here.restrictedTraverse('@@fancybox-include-condition').isOnFor('use_on_leadimage')"
+    expression="python: here.restrictedTraverse('@@fancybox-include-condition').isOnFor('use_on_leadimage') and here.getField('leadImage')"
     id="++resource++collective.js.fancybox/example/collective.js.fancybox_leadimage.js" inline="False"
     insert-after="++resource++collective.js.fancybox/jquery.fancybox.js" />
  <javascript cacheable="True" compression="safe" cookable="True"
     enabled="True"
-    expression="python: here.restrictedTraverse('@@fancybox-include-condition').isOnFor('use_on_text')"
+    expression="python: here.restrictedTraverse('@@fancybox-include-condition').isOnFor('use_on_text') and hasattr(here, 'getText')"
     id="++resource++collective.js.fancybox/example/collective.js.fancybox_text.js" inline="False"
     insert-after="++resource++collective.js.fancybox/jquery.fancybox.js" />
 </object>
