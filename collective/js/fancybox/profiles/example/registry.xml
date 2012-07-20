@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<registry>
+ <records interface="collective.js.fancybox.example.interfaces.IFancyboxSettings">
+      <value key="use_on_newsitem">False</value>
+      <value key="use_on_text">False</value>
+      <value key="use_on_leadimage">False</value>
+ </records>
+</registry>

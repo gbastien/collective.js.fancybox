@@ -18,6 +18,17 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="example"
+      title="collective.js.fancybox example integration"
+      directory="profiles/example"
+      description="Register fancybox behaviour for various elements in Plone activable thru portal_registry"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <include file="upgrades.zcml"/>
 
+  <include package=".example" />
+
+  
 </configure>
